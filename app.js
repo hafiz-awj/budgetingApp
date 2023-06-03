@@ -11,13 +11,14 @@ const afterEnteringName = () => {
     let welcome = div2.querySelector("p");
     welcome.innerHTML = `Welcome <strong> ${name.value} </strong>`;
   } else {
+    alert("Write a valid name");
   }
 };
 const afterEnteringBudget = () => {
   let name = document.getElementById("name");
   let budget = document.getElementById("monthly-budget");
   let remainingBudget = document.getElementById("div3-remaining-budget");
-let totalExpenses = document.getElementById("div3-total-expenses");
+  let totalExpenses = document.getElementById("div3-total-expenses");
   if (budget.value > 0) {
     let div1 = document.getElementById("div1");
     div1.style.display = "none";
@@ -34,6 +35,7 @@ let totalExpenses = document.getElementById("div3-total-expenses");
     remainingBudget.innerHTML = `Your remaining budget for this month is <br> "<strong> ${remainingBudget.value} </strong>"`;
     totalExpenses.innerHTML = `Your total expenses reach to <br> "<strong>${totalExpenses.value}</strong>"`;
   } else {
+    alert("Enter valid budget");
   }
 };
 
@@ -86,29 +88,33 @@ const createExpenses = () => {
   myExpenses.forEach((expense, index) => {
     const expenseDiv = document.createElement("div");
     expenseDiv.innerHTML = `
-    <div class="div3-expense-serial all-expenses"><h2><pre>   ${index + 1}</pre></h2><p>${expense.date}</p></div>
+    <div class="div3-expense-serial all-expenses"><h2><pre>   ${
+      index + 1
+    }</pre></h2><p>${expense.date}</p></div>
     <div class="all-expenses div3-expense-body">
-      <h3><pre>${expense.category}                                      Rs. ${expense.amount}</pre> </h3>
+      <h3><pre>${expense.category}                                      Rs. ${
+      expense.amount
+    }</pre> </h3>
       <p>${expense.description}</p>
     </div>
     <button onclick="deleteExpense(${index})" class="all-expenses div3-expense-remove">Remove Expense</button>`;
-    expenseDiv.id = "div3-expenses"
+    expenseDiv.id = "div3-expenses";
     expenseElement.appendChild(expenseDiv);
     expenseElement.style.marginTop = "150px";
   });
 };
 
-const deleteExpense = index => {
-  myExpenses.splice(index,1);
+const deleteExpense = (index) => {
+  myExpenses.splice(index, 1);
   createExpenses();
   result();
-}
+};
 
 const calculations = () => {
   const budget = document.getElementById("monthly-budget").value;
   let totalExpenses = 0;
   let remainingBudget = budget;
-  myExpenses.forEach(expense => {
+  myExpenses.forEach((expense) => {
     totalExpenses += Number(expense.amount);
   });
   remainingBudget = remainingBudget - totalExpenses;
@@ -119,8 +125,6 @@ const result = () => {
   const [totalExpenses, remainingBudget] = calculations();
   const div3TotalExpenses = document.getElementById("div3-total-expenses");
   const div3RemainingBudget = document.getElementById("div3-remaining-budget");
-  div3TotalExpenses.innerHTML = 
-  `Your total expenses reach to <br><strong>${totalExpenses}</strong>`;
-  div3RemainingBudget.innerHTML = 
-  `Your remaining budget <br><strong>${remainingBudget}</strong>`;
+  div3TotalExpenses.innerHTML = `Your total expenses reach to <br><strong>${totalExpenses}</strong>`;
+  div3RemainingBudget.innerHTML = `Your remaining budget <br><strong>${remainingBudget}</strong>`;
 };
