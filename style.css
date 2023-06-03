@@ -48,21 +48,19 @@ body {
   border: 3px double rgb(97, 192, 255);
   border-radius: 30px;
 }
-.div3 header {
+.div3-header {
   display: flex;
   height: 160px;
-  justify-content: space-around;
+  justify-content: none;
   align-items: center;
 }
 .header-div3 {
   padding: 10px;
-  border: 3px solid black;
-  border-radius: 10px;
-  width: 15%;
-  height: 146px;
+  border: 1px solid black;
+  width: 20%;
+  height: 170px;
   background-color: rgb(97, 192, 255);
   color: white;
-  box-shadow: 0 0 20px black;
 }
 .header-div3:hover {
   background-color: black;
@@ -100,7 +98,36 @@ body {
     border: 2px solid black;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
-
+#div3-expenses{
+  display: flex;
+  justify-content: none;
+  /* margin-top: 150px; */
+  align-items: center;
+}
+.all-expenses{
+  height: 100px;
+  background-color: black;
+  border: 2px solid rgb(97, 192, 255);
+  color: white;
+}
+.all-expenses:hover{
+  background-color: rgb(97, 192, 255);
+  color: white;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+.div3-expense-serial{
+  width: 10%;
+  padding: 5px 5px;
+}
+.div3-expense-body{
+  width: 75%;
+  padding: 20px;
+}
+.div3-expense-remove{
+  width: 15%;
+}
 /* Initial display state*/
 #div2 {
   display: none;

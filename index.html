@@ -21,64 +21,75 @@
 
   <body>
     <div class="center-div1" id="div1">
-        <div class="div1">
-            Enter your name:
-            <br>
-            <input type="text" name="Name" id="name" required placeholder="Enter your Good Name">
-            <br>
-            <button onclick="afterEnteringName()">Proceed</button>
-        </div>
+      <div class="div1">
+        Enter your name:
+        <br />
+        <input
+          type="text"
+          name="Name"
+          id="name"
+          required
+          placeholder="Enter your Good Name"
+        />
+        <br />
+        <button onclick="afterEnteringName()">Proceed</button>
+      </div>
     </div>
-    <div id="div2"  class="center-div1">
-        <div class="div1">
-            <p></p>
-            Set your Monthly Budget
-            <br>
-            <label>Rs. </label>
-            <input type="number" name="Budget" id="monthly-budget" required placeholder="Enter your Monthly Budget">
-            <br>
-            <button onclick="afterEnteringBudget()">Proceed</button>
-        </div>
+    <div id="div2" class="center-div1">
+      <div class="div1">
+        <p></p>
+        Set your Monthly Budget
+        <br />
+        <label>Rs. </label>
+        <input
+          type="number"
+          name="Budget"
+          id="monthly-budget"
+          required
+          placeholder="Enter your Monthly Budget"
+        />
+        <br />
+        <button onclick="afterEnteringBudget()">Proceed</button>
+      </div>
     </div>
-
 
     <div id="div3" class="div3">
-        <header>
-                <div class="header-div3">
-                    <p id="div3-name"></p>
-                </div>
-                <div class="header-div3">
-                    <p id="div3-budget"></p>
-                </div>
-                <div class="header-div3">
-                    <p id="div3-total-expenses"></p>
-                </div>
-                <div class="header-div3">
-                    <p id="div3-remaining-budget"></p>
-                </div>
-                <button onclick="expenseButton()" class="header-div3" id="div3-button">
-                  
-                    Click Here To Add Expense
-                </button>
-        </header>
-        <main>
-          <div id="div3-expenses"></div>
-        </main>
+      <header class="div3-header">
+        <div class="header-div3">
+          <p id="div3-name"></p>
+        </div>
+        <div class="header-div3">
+          <p id="div3-budget"></p>
+        </div>
+        <div class="header-div3">
+          <p id="div3-total-expenses"></p>
+        </div>
+        <div class="header-div3">
+          <p id="div3-remaining-budget"></p>
+        </div>
+        <button onclick="expenseButton()" class="header-div3" id="div3-button">
+          Click Here To Add Expense
+        </button>
+      </header>
+      <main>
+        <!-- <div class="div3-expense-serial all-expenses"><h2>1</h2></div>
+          <div class="all-expenses div3-expense-body">
+            <h3><pre>Restaurants and Cafe                                          Rs. 00</pre> </h3>
+            <p>Description goes here</p>
+          </div>
+          <button class="all-expenses div3-expense-remove">Remove Expense</button> -->
+      </main>
     </div>
     <div id="div4" class="div4">
       <div>
         <label>Date: </label>
-        <br>
-        <input type="date" name="Date" id="date">
-        <br>
-        <br>
+        <br />
+        <input type="date" name="Date" id="date" />
+        <br />
+        <br />
         <label>Category: </label>
         <br />
-        <select
-          name="Category"
-          id="category"
-          required
-        >
+        <select name="Category" id="category" required>
           <option value="" selected>Select an expense category</option>
           <option value="Rent/Mortgage">Rent/Mortgage</option>
           <option value="Utility Bills">Utility Bills</option>
@@ -91,25 +102,27 @@
           <option value="Clothing/Personal Care">Clothing/Personal Care</option>
           <option value="Insurance Premiums">Insurance Premiums</option>
           <option value="Education/Tuition Fees">Education/Tuition Fees</option>
-          <option value="Home Maintenance/Repairs">Home Maintenance/Repairs</option>
+          <option value="Home Maintenance/Repairs">
+            Home Maintenance/Repairs
+          </option>
           <option value="Credits and Loans">Credits and Loans</option>
           <option value="Restaurants and Cafe">Restaurants and Cafe</option>
           <option value="Gifts/Presents">Gifts/Presents</option>
           <option value="Others">Others</option>
         </select>
-        <br>
-        <br>
+        <br />
+        <br />
         <label>Amount Rs.:</label>
-        <br>
-        <input type="number" name="Amount" id="amount">
-        <br>
-        <br>
+        <br />
+        <input type="number" name="Amount" id="amount" />
+        <br />
+        <br />
         <label>Description: </label>
-        <br>
-        <input type="text" name="Description" id="desc" maxlength="50">
-        <br>
-        <br>
-        <br>
+        <br />
+        <input type="text" name="Description" id="desc" maxlength="500" />
+        <br />
+        <br />
+        <br />
         <button onclick="addExpense()">Add Expense</button>
       </div>
     </div>
