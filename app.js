@@ -92,7 +92,7 @@ const createExpenses = () => {
       index + 1
     }</pre></h2><p>${expense.date}</p></div>
     <div class="all-expenses div3-expense-body">
-      <h3><pre>${expense.category}                                      Rs. ${
+      <h3><pre>${expense.category}                            Rs. ${
       expense.amount
     }</pre> </h3>
       <p>${expense.description}</p>
